@@ -18,7 +18,7 @@ const Page = () => {
                 <div><PreferencesComponents/></div>
                 <div><PreferencesComponents/></div>
             </div>
-            <div className="container-width flex flex-wrap justify-center  gap-5">
+            <div className="container-width container-width grid grid-cols-3 my-10 gap-5">
                 <Card/>
                 <Card/>
                 <Card/>
