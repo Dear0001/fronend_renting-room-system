@@ -1,10 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {(function(Object): *)|{}} */
+const withMT = require("@material-tailwind/html/utils/withMT");
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{html,js}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
+  plugins: [],
   theme: {
     extend: {
       backgroundImage: {
@@ -14,5 +21,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
 };
