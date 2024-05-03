@@ -16,7 +16,7 @@ const Page = () => {
                 <div><PreferencesComponents/></div>
                 <div><PreferencesComponents/></div>
             </div>
-            <div className="flex flex-wrap justify-center my-10 gap-5">
+            <div className="container-width flex flex-wrap justify-center my-10 gap-5">
                 <RoomCard/>
                 <RoomCard/>
                 <RoomCard/>
