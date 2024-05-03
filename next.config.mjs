@@ -4,7 +4,6 @@ const nextConfig = {
         remotePatterns: [
             {
                 hostname: "*",
-
             },
         ],
 

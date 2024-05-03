@@ -6,3 +6,7 @@ body{
     /*background-color: #f9f9f9;*/
     color: #333;
 }
+.container-width{
+    width: 1238px;
+    margin: 0 auto;
+}

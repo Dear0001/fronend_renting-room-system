@@ -36,7 +36,7 @@ const RentingResumeComponent = () => {
                     <p className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                         <strong>Current Address: <span></span></strong>
                     </p>
-                    <p className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                    <div className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                         <strong>Payment:  </strong>
                         <ul>
                             <li>Book room</li>
@@ -44,7 +44,7 @@ const RentingResumeComponent = () => {
                             <li>Water 2000R/1km^3</li>
                             <li>Available Room: 90$/1st Floor, 80$/2nd Floor, 70$/3rd Floor</li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
             </div>
         </>

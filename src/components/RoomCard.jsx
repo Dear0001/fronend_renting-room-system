@@ -35,21 +35,16 @@ const RoomCard = () => {
                         <span>Saing Sopheak</span>
                     </p>
                 </div>
-                {/*<p>Location: <span className={"text-blue-400"}>Toul Kork</span></p>*/}
-                {/*<p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-500">*/}
-                {/*    Contact number: 095 3832 434*/}
-                {/*</p>*/}
-                {/*<p className={"text-blue-400"}>• Renting Polices</p>*/}
                 <ul className={"flex flex-col gap-2"}>
                     <li>Location: <span>Toul Kork</span></li>
                     <li>Contact Number: <span>095 3832 434</span></li>
                     <li>Renting Policies</li>
                     <li>
-                        <div className={"flex justify-between"}>
+                        <article className={"flex justify-between"}>
                         <p>
                             Availability: <span>Free</span></p>
                             <p className={"text-blue-400"}>See More...</p>
-                        </div>
+                        </article>
                         <div className={"flex justify-between"}>
                             <span></span>
                             <span> <FaStar className={"inline-block"}/> 4.7</span>

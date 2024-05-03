@@ -1,6 +1,14 @@
 /** @type {(function(Object): *)|{}} */
 const withMT = require("@material-tailwind/html/utils/withMT");
 module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/home/:path*',
+        destination: 'http://localhost:3000/home',
+      },
+    ];
+  },
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
