@@ -75,14 +75,14 @@ const Login = () => {
                     Start your <br/>
                     life with us
                 </p>
-                <p className="mb-28 leading-relaxed text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Facere nisi voluptas a officia. Omnis.</p>
+                <p className="mb-28 leading-relaxed text-gray-200">Lorem ipsum dolor sit amet consectetur radicalising elit.
+                    Face nisei voluptuous a official. Omnibus.</p>
                 <div className="bg-blue-600/80 rounded-2xl px-4 py-8">
-                    <p className="mb-3 text-gray-200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ea
-                        voluptates sapiente!</p>
+                    <p className="mb-3 text-gray-200">Lorem ipsum dolor sit amet, consectetur radicalising elit. Error ea
+                        voluptuous sapient!</p>
                     <div className="">
                         <div className="flex items-center">
-                            <img className="h-10 w-10 rounded-full object-cover" src="/images/y9s3xOJV6rnQPKIrdPYJy.png"
+                            <img className="h-10 w-10 rounded-full object-cover" src=""
                                  alt="Simon Lewis"/>
                             <p className="ml-4 w-56">
                                 <strong className="block font-medium">Simon Lewis</strong>

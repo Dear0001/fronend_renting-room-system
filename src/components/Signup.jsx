@@ -21,7 +21,7 @@ const Signup = () => {
                         voluptates sapiente!</p>
                     <div className="">
                         <div className="flex items-center">
-                            <img className="h-10 w-10 rounded-full object-cover" src="/images/y9s3xOJV6rnQPKIrdPYJy.png"
+                            <img className="h-10 w-10 rounded-full object-cover" src=""
                                  alt="Simon Lewis"/>
                             <p className="ml-4 w-56">
                                 <strong className="block font-medium">Simon Lewis</strong>
