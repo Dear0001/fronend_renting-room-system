@@ -36,9 +36,9 @@ const NavbarRent = () => {
                                 </a>
                             </li>
                             <li>
-                                <a className="self-stretch my-auto cursor-pointer" onClick={handleClick}>
-                                    {isLoggedIn ? 'Sign Out' : 'Sign Up'}
-                                </a>
+                                <Link href={"/register"} className="self-stretch my-auto cursor-pointer" onClick={handleClick}>
+                                    {isLoggedIn ? 'Sign Out' : 'Sign In'}
+                                </Link>
                             </li>
                         </ul>
 

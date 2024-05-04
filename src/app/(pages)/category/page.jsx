@@ -10,7 +10,7 @@ const Page = () => {
                 <MdFindReplace  className={"mb-5"}/>
                 <h3 className={"mb-5"}>Filter your preferences</h3>
             </div>
-            <div className="container-width grid grid-cols-4 gap-4">
+            <div className="container-width grid grid-cols-4 my-4 gap-4">
                 <div><PreferencesComponents/></div>
                 <div><PreferencesComponents/></div>
                 <div><PreferencesComponents/></div>

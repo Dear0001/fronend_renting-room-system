@@ -12,6 +12,7 @@
     "@material-tailwind/html": "^2.2.2",
     "next": "14.2.3",
     "next-auth": "^4.24.7",
+    "nodemailer": "^6.9.13",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.1.0"
