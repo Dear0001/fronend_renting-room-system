@@ -64,9 +64,9 @@ const Login = () => {
                                    placeholder="Choose a password (minimum 8 characters)"/>
                         </div>
                     </div>
-                    <button
+                    <Link href={"/"}
                         className="hover:shadow-blue-600/40 rounded-xl bg-gradient-to-r from-blue-700 to-blue-600 px-8 py-3 font-bold text-white transition-all hover:opacity-90 hover:shadow-lg">Login
-                    </button>
+                    </Link>
                 </div>
             </form>
             <div className="max-w-full rounded-3xl bg-gradient-to-t from-blue-700 via-blue-400 to-blue-600 px-4 py-10 text-white sm:px-10 md:m-6 md:mr-8">

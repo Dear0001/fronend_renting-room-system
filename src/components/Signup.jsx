@@ -105,7 +105,7 @@ const Signup = () => {
                                    placeholder="Choose a password (minimum 8 characters)"/>
                         </div>
                     </div>
-                    <Link href={"/otpsForm"}
+                    <Link href={"/opt"}
                         className="hover:shadow-blue-600/40 rounded-xl bg-gradient-to-r from-blue-700 to-blue-600 px-8 py-3 font-bold text-white transition-all hover:opacity-90 hover:shadow-lg">Sign
                         Up
                     </Link>
