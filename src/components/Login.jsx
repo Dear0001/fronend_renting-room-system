@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import PhoneNumber from "@/components/PhoneNumber";
 import Link from "next/link";
+import Image from "next/image";
 
 const Login = () => {
     const [signupMethod, setSignupMethod] = useState('email');
@@ -82,7 +83,7 @@ const Login = () => {
                         voluptuous sapient!</p>
                     <div className="">
                         <div className="flex items-center">
-                            <img className="h-10 w-10 rounded-full object-cover" src=""
+                            <Image height={10} width={10} className="h-10 w-10 rounded-full object-cover" src="tes"
                                  alt="Simon Lewis"/>
                             <p className="ml-4 w-56">
                                 <strong className="block font-medium">Simon Lewis</strong>
