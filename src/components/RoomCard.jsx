@@ -1,16 +1,17 @@
 import React from 'react';
-import {FaStairs} from "react-icons/fa6";
+// import {FaStairs} from "react-icons/fa6";
 import { FaUserLarge } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
 import { FaTachometerAlt } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
 
 const RoomCard = () => {
     return (
-        <div
-            className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+        <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
             <div
                 className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
-                <img
+                <Image width={10} height={10}
                     src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
                     alt="ui/ux review check"/>
                 <div
@@ -43,7 +44,9 @@ const RoomCard = () => {
                         <article className={"flex justify-between"}>
                         <p>
                             Availability: <span>Free</span></p>
-                            <p className={"text-blue-400"}>See More...</p>
+                            <p className={"text-blue-400"}>
+                                <Link href={"/detail"}>See More...</Link>
+                            </p>
                         </article>
                         <div className={"flex justify-between"}>
                             <span></span>
