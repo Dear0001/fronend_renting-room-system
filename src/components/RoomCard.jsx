@@ -12,8 +12,8 @@ const RoomCard = () => {
         <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
             <div
                 className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
-                <Image width={10} height={10}
-                    src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
+                <Image width={500} height={500}
+                    src="https://static01.nyt.com/images/2024/02/04/realestate/31fix01/oakImage-1706637986147-superJumbo.jpg?quality=75&auto=webp"
                     alt="ui/ux review check"/>
                 <div
                     className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60">
