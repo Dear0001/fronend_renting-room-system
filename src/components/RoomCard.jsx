@@ -6,6 +6,7 @@ import { FaTachometerAlt } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 
+
 const RoomCard = () => {
     return (
         <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
