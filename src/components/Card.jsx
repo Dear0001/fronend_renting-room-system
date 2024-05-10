@@ -2,7 +2,7 @@ import React from 'react';
 import { FaStairs } from "react-icons/fa6";
 import Image from "next/image";
 
-const Card = () => {
+const Card = ({image, movie_title, description}) => {
     return (
         <>
             <div
@@ -10,7 +10,7 @@ const Card = () => {
                 <div
                     className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
                     <Image width={400} height={400}
-                        src="https://static01.nyt.com/images/2024/02/04/realestate/31fix01/oakImage-1706637986147-superJumbo.jpg?quality=75&auto=webp"
+                           src={image ? image : "https://prod-images.viu.com/2521856816/6feda49624fdc12682d3a83feb50a732252503f9"}
                         alt="ui/ux review check"/>
                     <div
                         className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60">
@@ -30,7 +30,7 @@ const Card = () => {
                 <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
                         <h5 className="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
-                            Wooden House, Florida
+                            {movie_title}
                         </h5>
                         <p
                             className="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
@@ -43,7 +43,7 @@ const Card = () => {
                             5.0
                         </p>
                     </div>
-                    <p>Owner: <span className={"text-blue-400"}>Saing Sopheak</span></p>
+                    <p>Owner: <span className={"text-blue-400"}>Saing Sopheak: {description}</span></p>
                     <p><span className={"font-bold"}>$70/$80/$90 </span>a month</p>
                     <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-500">
                         Contact number: 095 3832 434

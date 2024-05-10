@@ -7,13 +7,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 
-const RoomCard = () => {
+const RoomCard = ({image, movie_title, description}) => {
+
     return (
         <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
             <div
                 className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
                 <Image width={500} height={500}
-                    src="https://static01.nyt.com/images/2024/02/04/realestate/31fix01/oakImage-1706637986147-superJumbo.jpg?quality=75&auto=webp"
+                       src={image ? image : "https://prod-images.viu.com/2521856816/6feda49624fdc12682d3a83feb50a732252503f9"}
                     alt="ui/ux review check"/>
                 <div
                     className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60">
