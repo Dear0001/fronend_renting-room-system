@@ -9,4 +9,4 @@ export default function middleware(request) {
     }
 }
 
-export const config = { matcher: ["/detail"] };
+export const config = { matcher: ["/renting"] };

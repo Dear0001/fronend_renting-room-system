@@ -22,7 +22,7 @@ const Page = () => {
         });
         console.log("key: ", res)
         if (res.ok) {
-            router.push("/detail")
+            router.push("/renting")
         }
     }
     const [showPassword, setShowPassword] = useState(false);
