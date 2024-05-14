@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 import { otpService } from '@/service/otp.service';
 
+
 const Page = () => {
     const [message, setMessage] = useState('');
     const [otp, setOTP] = useState('');
@@ -15,13 +16,13 @@ const Page = () => {
         setIsLoading(true);
 
         try {
-            const response = await otpService.verifyOtp(otp, 'email@example.com'); // Replace with actual email
+            const response = await otpService.verifyOtp(otp, 'email@example.com');
 
             if (response.success) {
                 setMessage('OTP verification successful!');
                 const newUser = {
                     email: 'email@example.com',
-                    password: 'password' // Replace with actual password handling
+                    password: 'password'
                 }
                 const res = await signIn("credentials", {
                     redirect: false,
@@ -52,7 +53,7 @@ const Page = () => {
                             <p>Email Verification</p>
                         </div>
                         <div className="flex flex-row text-sm font-medium text-gray-400">
-                            <p>We have sent a code to your email ba**@dipainhouse.com</p>
+                            <p>We have sent a code to your email ba**@packinghouse.com</p>
                         </div>
                     </div>
 

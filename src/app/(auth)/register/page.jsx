@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import PhoneNumber from "@/components/PhoneNumber";
 import signupAction from "@/action/signupAction";
+
+
 const Page = () => {
     const router = useRouter();
     const {
@@ -31,12 +33,12 @@ const Page = () => {
                         life with us
                     </p>
                     <p className="mb-28 leading-relaxed text-gray-200">Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit.
-                        Facere nisi voluptas a officia. Omnis.</p>
+                        radicalising elit.
+                        Face nisi voluptas a official. Omnis.</p>
                     <div className="bg-blue-600/80 rounded-2xl px-4 py-8">
                         <p className="mb-3 text-gray-200">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Error ea
-                            voluptates sapiente!</p>
+                            voluptuous sapient!</p>
                         <div className="">
                             <div className="flex items-center">
                                 <Image height={10} width={10} className="h-10 w-10 rounded-full object-cover" src=""
