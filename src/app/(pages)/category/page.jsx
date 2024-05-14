@@ -2,6 +2,7 @@ import React from 'react';
 import {MdFindReplace} from "react-icons/md";
 import PreferencesComponents from "@/components/PreferencesComponents";
 import RoomCard from "@/components/RoomCard";
+import ImageScroll from "@/components/ImageScroll";
 
 const Page = async () => {
     const data = await fetch("https://movie-api-get-only-bmc3.vercel.app/api");

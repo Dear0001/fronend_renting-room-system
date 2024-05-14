@@ -71,6 +71,7 @@ const Signup = () => {
                             className="focus-within:border-blue-600 relative flex overflow-hidden rounded-md border-2 transition sm:w-80 lg:w-full">
                             <input type="name" id="signup-first-name"
                                    className="w-full border-gray-300 bg-white px-4 py-2 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
+                                   {...register("firstname", {required: "First Name is required"})}
                                    placeholder="First name"/>
                         </div>
                     </div>
