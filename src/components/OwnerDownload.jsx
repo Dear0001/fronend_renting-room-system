@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from "next/image";
-import ImageScroll from "@/components/ImageScroll";
 
 const OwnerDownload =  () => {
     return (

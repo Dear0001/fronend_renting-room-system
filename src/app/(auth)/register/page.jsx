@@ -1,7 +1,7 @@
 "use client"
 import React, {useState} from 'react';
 import {useRouter} from "next/navigation";
-import {useForm, SubmitHandler } from "react-hook-form";
+import {useForm } from "react-hook-form";
 import Image from "next/image";
 import Link from "next/link";
 import PhoneNumber from "@/components/PhoneNumber";
@@ -50,7 +50,7 @@ const Page = () => {
                     </div>
                 </div>
                 {/*Form input */}
-                <form>
+                <form   onSubmit={handleSubmit(handleUserRegister)}>
                     <div className="px-4 py-20">
                         <h2 className="mb-2 text-3xl font-bold">Sign Up</h2>
                         <span href="#" className="mb-10 block font-bold text-gray-600">Have an account <Link
