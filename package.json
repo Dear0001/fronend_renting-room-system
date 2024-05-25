@@ -11,6 +11,7 @@
   "dependencies": {
     "@material-tailwind/html": "^2.2.2",
     "clsx": "^2.1.1",
+    "formik": "^2.4.6",
     "next": "14.2.3",
     "next-auth": "^4.24.7",
     "nodemailer": "^6.9.13",
@@ -18,7 +19,9 @@
     "react-dom": "^18",
     "react-hook-form": "^7.51.4",
     "react-icons": "^5.1.0",
-    "tailwind-merge": "^2.3.0"
+    "react-onesignal": "^3.0.1",
+    "tailwind-merge": "^2.3.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

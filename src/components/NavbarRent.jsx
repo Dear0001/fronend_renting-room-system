@@ -1,20 +1,14 @@
 "use client"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const NavbarRent = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    const handleClick = () => {
-        setIsLoggedIn(prevState => !prevState);
-    };
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
-        setIsOpen(prevState => !prevState);
+        setIsOpen(!isOpen);
     };
-
     return (
         <>
             <div className="flex flex-col justify-end items-center bg-blue-500  px-16 py-3 max-md:px-5">
@@ -46,7 +40,7 @@ const NavbarRent = () => {
                             </ul>
                         </div>
                         {/*profile*/}
-                        <div className="dropdown dropdown-end text-black">
+                        <div className="dropdown dropdown-end text-black" onClick={toggleDropdown}>
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     <Image width={50} height={50} alt="Tailwind CSS Navbar component"
@@ -54,7 +48,7 @@ const NavbarRent = () => {
                                 </div>
                             </div>
                             <ul tabIndex={0}
-                                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                className={`menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ${isOpen ? '' : 'hidden'}`}>
                                 <li>
                                     <a className="justify-between">
                                         Profile
@@ -62,7 +56,7 @@ const NavbarRent = () => {
                                     </a>
                                 </li>
                                 <li><a>Settings</a></li>
-                                <li><a>Logout</a></li>
+                                <li><Link href={"register"}>Sign in</Link></li>
                             </ul>
                         </div>
                     </div>

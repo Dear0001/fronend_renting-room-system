@@ -3,10 +3,11 @@ import React, {useState} from 'react';
 import Link from "next/link";
 import PhoneNumber from "@/components/PhoneNumber";
 import Image from "next/image";
-import {signIn} from "next-auth/react"
+import {signIn, signOut} from "next-auth/react"
 import {useRouter} from "next/navigation";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { IoEyeOutline } from "react-icons/io5";
+import {session} from "next-auth/react";
 
 const Page = () => {
     const router = useRouter();
@@ -29,6 +30,7 @@ const Page = () => {
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
+    console.log("this is session: ", session)
 
     const [signupMethod, setSignupMethod] = useState('email');
     return (
@@ -100,16 +102,37 @@ const Page = () => {
                             </div>
                         </div>
                         <div class="my-5">
-                            <button
-                                className="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
-                                <Image height={30} width={30} src="https://www.svgrepo.com/show/355037/google.svg" className="w-6 h-6" alt=""/>
-                                <span>Login with Google</span>
-                            </button>
+                            {!session && (
+                                <button
+                                onClick={() => signIn("google")} // Use signIn("google") to trigger Google sign-in
+                            className="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
+                            <Image height={30} width={30} src="https://www.svgrepo.com/show/355037/google.svg"
+                                   className="w-6 h-6" alt=""/>
+                            <span>Login with Google</span>
+                        </button>
+                        )}
+                            {session && (
+                                <>
+                                    <p>Welcome, {session.user.name}!</p>
+                                    <img src={session.user.image} alt={session.user.name}/>
+                                    <button
+                                        onClick={() => signOut()}
+                                        className="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
+                                        <Image height={30} width={30}
+                                               src="https://www.svgrepo.com/show/355037/google.svg"
+                                               className="w-6 h-6" alt=""/>
+                                        <span>Sign Out</span>
+                                    </button>
+                                </>
+                            )}
+
                         </div>
                         <div class="my-5">
                             <button
                                 className="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
-                                <Image height={30} width={30}  src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_1280.png" className="w-6 h-6" alt=""/>
+                                <Image height={30} width={30}
+                                       src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_1280.png"
+                                       className="w-6 h-6" alt=""/>
                                 <span>Login with Facebook</span>
                             </button>
                         </div>

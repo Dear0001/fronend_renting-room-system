@@ -1,21 +1,30 @@
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 import NextAuth from "next-auth";
-import {loginService} from "@/service/login.service";
+import { loginService } from "@/service/login.service";
 
 export const authOptions = {
-
     providers: [
-        //login by email and password
+        // Login by email and password
         CredentialsProvider({
-            async authorize(credentials) {
+            async authorize(credentials, req) {
                 const { email, password } = credentials;
-                const login = await loginService({ email, password });
-                if (login?.status === 400) {
-                    throw new Error(login);
+                try {
+                    const login = await loginService({ email, password });
+                    if (login?.status === 400) {
+                        throw new Error("Invalid email or password");
+                    }
+                    return login;
+                } catch (error) {
+                    throw new Error("Login failed");
                 }
-                return login;
             },
-        })
+        }),
+        // Login with Google
+        GoogleProvider({
+            clientId: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        }),
     ],
     secret: process.env.NEXTAUTH_SECRET,
     session: {
@@ -24,12 +33,14 @@ export const authOptions = {
     pages: {
         signIn: "/login",
     },
-
     callbacks: {
-        async jwt({token, user}) {
-            return {...token, ...user};
+        async jwt({ token, user }) {
+            if (user) {
+                return { ...token, ...user };
+            }
+            return token;
         },
-        async session({session, token}) {
+        async session({ session, token }) {
             session.user = token;
             return session;
         },
@@ -37,4 +48,4 @@ export const authOptions = {
 };
 
 const handler = NextAuth(authOptions);
-export {handler as GET, handler as POST};
+export { handler as GET, handler as POST };
