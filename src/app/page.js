@@ -30,7 +30,7 @@ const Page = async () => {
             <div className="container-width container-width grid grid-cols-3 my-10 gap-5">
                 {
                     result?.payload?.map((movie) => (
-                        <Link href={`/detail/${movie.movie_id}`}>
+                        <Link href={`/detail/${movie.movie_id}`} key={movie.movie_id}>
                             <Card
                                 image={movie.image}
                                 movie_title={movie.movie_title}
