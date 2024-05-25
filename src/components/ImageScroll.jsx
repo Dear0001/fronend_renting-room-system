@@ -4,7 +4,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Image from "next/image";
 import { data } from './mockData';
 
-const ImageScroll = () => {
+const ImageScroll = ({image}) => {
     const sliderRef = useRef(null);
 
     const slideLeft = () => {
@@ -27,7 +27,7 @@ const ImageScroll = () => {
                     className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
                 >
                     {data.map((item, index) => (
-                        <div key={index} className='inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'>
+                        <div className='inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'>
                             <Image
                                 src={item.img}
                                 alt='/'

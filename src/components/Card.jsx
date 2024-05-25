@@ -43,7 +43,7 @@ const Card = ({image, movie_title, description}) => {
                             5.0
                         </p>
                     </div>
-                    <p>Owner: <span className={"text-blue-400"}>Saing Sopheak: {description}</span></p>
+                    <p>Owner: <span className={"text-blue-400"}>Saing Sopheak</span></p>
                     <p><span className={"font-bold"}>$70/$80/$90 </span>a month</p>
                     <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-500">
                         Contact number: 095 3832 434

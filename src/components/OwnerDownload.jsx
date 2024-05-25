@@ -1,12 +1,19 @@
 import React from 'react';
 import Image from "next/image";
 
-const OwnerDownload =  () => {
+const OwnerDownload =  ({image, movie_title, description}) => {
     return (
         <div className="flex flex-col gap-5 max-md:flex-wrap">
             <div className="flex flex-col gap-2.5 px-5 -mt-24 text-black">
-                <div className="text-4xl font-bold">
-                    Sopheak Saing
+                <div className={"flex gap-5 justify-start text-center items-center"}>
+                    <div className="avatar">
+                        <div className="w-24 rounded-full">
+                            <img src= {image ? image :"https://prod-images.viu.com/2521856816/6feda49624fdc12682d3a83feb50a732252503f9" } alt={"f"}/>
+                        </div>
+                    </div>
+                    <div className="text-4xl font-bold">
+                        Sopheak Saing
+                    </div>
                 </div>
                 <div className="gap-0 self-end mt-2.5 text-xl">View my room on map</div>
             </div>
@@ -17,7 +24,7 @@ const OwnerDownload =  () => {
                             <div className="px-5 pt-5 pb-9 bg-white rounded-xl shadow-lg">
                                 Personal Info:
                                 <br />
-                                <span>Full Name:</span>
+                                <span>Full Name: {movie_title}</span>
                                 <br />
                                 <span>Contact info:</span>
                                 <br />
@@ -38,7 +45,7 @@ const OwnerDownload =  () => {
                                         <span>Amenities:</span>
                                     </li>
                                 </ul>
-                                <span>Renting Info:</span>
+                                <span>Renting Info: {description}</span>
                                 <ul>
                                     <li></li>
                                 </ul>
@@ -47,10 +54,20 @@ const OwnerDownload =  () => {
                             </div>
                         </div>
                         <div className="flex z-10 py-10">
-                            <div className="flex gap-4 items-start px-3 pt-1.5 pb-3.5 text-lg text-black bg-white rounded-xl shadow-lg">
-                                <p>View Policies Document:</p>
-                                <input type="file" id="file" name="file" accept="application/pdf" />
+                            <div
+                                class="flex gap-4 items-start text-xl font-bold px-3 pt-1 pb-3 text-black bg-white rounded-xl shadow-lg">
+                                <label htmlFor="file" className="cursor-pointer flex gap-3">
+                                    <p>Upload Policies Document</p>
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center">+</span>
+                                        <span class="text-blue-500">Choose File</span>
+                                    </div>
+                                    <input type="file" id="file" name="file" accept="application/pdf"
+                                           className="hidden"/>
+                                </label>
                             </div>
+
                         </div>
                     </div>
                 </div>

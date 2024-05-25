@@ -31,17 +31,6 @@ const BannerNav = () => {
                                         </div>
                                         <DropDown/>
 
-                                        {/*<div class="dropdown dropdown-bottom dropdown-end" onClick="toggleDropdown()">*/}
-                                        {/*    <span tabindex="0" role="button" class="btn bg-white m-1 border-0 hover:bg-white active:bg-white shadow-none">*/}
-                                        {/*        <IoIosArrowDown/>*/}
-                                        {/*    </span>*/}
-                                        {/*    <ul tabindex="0"*/}
-                                        {/*        class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-60 mt-2">*/}
-                                        {/*        <li><a>Item 1</a></li>*/}
-                                        {/*        <li><a>Item 2</a></li>*/}
-                                        {/*    </ul>*/}
-                                        {/*</div>*/}
-
 
                                     </div>
                                 </div>
