@@ -7,7 +7,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 
-const RoomCard = ({image, movie_title, description}) => {
+const RoomCard = ({movie_id,image, movie_title, description}) => {
+    console.log("this is movie id:", movie_id)
 
     return (
         <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
@@ -46,9 +47,6 @@ const RoomCard = ({image, movie_title, description}) => {
                         <article className={"flex justify-between"}>
                         <p>
                             Availability: <span>Free</span></p>
-                            <p className={"text-blue-400"}>
-                                <Link href={"/detail"}>See More...</Link>
-                            </p>
                         </article>
                         <div className={"flex justify-between"}>
                             <span></span>
@@ -56,9 +54,9 @@ const RoomCard = ({image, movie_title, description}) => {
                         </div>
                     </li>
                     <li>
-                        <a type={"button"} className={"flex text-center items-center justify-center gap-4 bg-blue-500 text-white py-2.5 px-4 rounded-2xl"}>
+                        <Link  href={`/detail/${movie_id}`} key={movie_id} type={"button"} className={"flex text-center items-center justify-center gap-4 bg-blue-500 text-white py-2.5 px-4 rounded-2xl"}>
                             <FaTachometerAlt />
-                            Rent Now</a>
+                            See More...</Link>
                     </li>
                 </ul>
             </div>

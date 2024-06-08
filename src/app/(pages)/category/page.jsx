@@ -5,6 +5,7 @@ import RoomCard from "@/components/RoomCard";
 import {IoLocationSharp, IoPricetagOutline} from "react-icons/io5";
 import {GiStairs} from "react-icons/gi";
 import {FaUsers} from "react-icons/fa";
+import Link from "next/link";
 
 const Page = async () => {
     const data = await fetch("https://movie-api-get-only-bmc3.vercel.app/api");
@@ -24,12 +25,15 @@ const Page = async () => {
             <div className="container-width grid grid-cols-3 my-10 gap-5">
                 {
                     result?.payload?.map((movie) => (
-                        <RoomCard
+                        <Link href={`/detail/${movie.movie_id}`} key={movie.movie_id}>
+                            <RoomCard
                             key={movie.id}
+                            movie_id={movie.movie_id}
                             image={movie.image}
                             movie_title={movie.movie_title}
                             description={movie.description}
-                        />
+                            />
+                        </Link>
                     ))
                 }
             </div>

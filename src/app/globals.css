@@ -19,3 +19,16 @@ body{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+@keyframes upDownBg {
+    0%, 100% {
+        background-position: center top;
+    }
+    50% {
+        background-position: center bottom;
+    }
+}
+
+.animate-upDownBg {
+    animation: upDownBg 10s ease-in-out infinite alternate;
+}
