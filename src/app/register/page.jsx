@@ -4,7 +4,6 @@ import PhoneNumber from "@/components/Email";
 import Link from "next/link";
 
 const Register = () => {
-
     const [signupMethod, setSignupMethod] = useState('email');
     return (
         <main className="container-width">
@@ -91,7 +90,7 @@ const Register = () => {
                                     </button>
                                     <p className="mt-6 text-xs text-gray-600 text-center">Have you an account? <Link href={"/login"} className={"text-blue-400 hover:underline"}>Login</Link></p>
                                     <p className="mt-6 text-xs text-gray-600 text-center">
-                                        I agree to abide by templatana's
+                                        I agree to abide by template&apos;s
                                         <a href="#" className="border-b border-gray-500 border-dotted">
                                             Terms of Service
                                         </a>
