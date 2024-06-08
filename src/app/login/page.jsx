@@ -4,11 +4,12 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+
 const Login = () => {
     const router = useRouter();
     const [error, setError] = useState(null);
     const { data: session } = useSession();
-
+    console.log(session)
     const handleSignIn = async (provider) => {
         setError(null);
         const result = await signIn(provider, { redirect: false, callbackUrl: '/' });
@@ -23,8 +24,7 @@ const Login = () => {
     return (
         <main className="container-width">
             <div className="my-10 bg-gray-100 text-gray-900 flex justify-center">
-                <div
-                    className="max-w-screen-xl h-[780px] m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
+                <div className="max-w-screen-xl h-[780px] m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
                     <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
                         <div>
                             <img
@@ -115,11 +115,11 @@ const Login = () => {
                                         </span>
                                     </button>
 
-                                    <p className="mt-6 text-xs text-gray-600 text-center">Didn't have an account?
+                                    <p className="mt-6 text-xs text-gray-600 text-center">Didn&apos;t have an account?
                                         <Link href={"/register"} className={"text-blue-400 hover:underline"}>Sign up</Link>
                                     </p>
                                     <p className="mt-6 text-xs text-gray-600 text-center">
-                                        I agree to abide by templatana's
+                                        I agree to abide by templatana&apos;s
                                         <a href="#" className="border-b border-gray-500 border-dotted">
                                             Terms of Service
                                         </a>
