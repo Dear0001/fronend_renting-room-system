@@ -51,7 +51,7 @@ const Page = async () => {
                                     image={movie.image}
                                     movie_title={movie.movie_title}
                                     description={movie.description}
-                                    genre={movie.genre}
+                                    movie_id={movie.movie_id}
                                 />
                             ))}
                         </div>

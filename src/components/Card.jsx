@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {FaTachometerAlt} from "react-icons/fa";
 
-const Card = ({image, movie_title, key}) => {
+const Card = ({image, movie_title, movie_id}) => {
     return (
         <>
             <div
@@ -47,7 +47,7 @@ const Card = ({image, movie_title, key}) => {
                         </p>
                     </div>
                 </div>
-                <Link href={`/detail/${key}`} key={key}>
+                <Link href={`/detail/${movie_id}`}>
                         <span className={"flex text-center mx-5 items-center justify-center gap-4 bg-blue-500 text-white py-2.5 px-4 rounded-2xl"}>
                             <FaTachometerAlt />
                             See Detail...
