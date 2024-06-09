@@ -44,9 +44,9 @@ const ClientNavbarRent = ({ session }) => {
                                 </Link>
                             </li>
                             <li>
-                                <a className="self-stretch my-auto cursor-pointer">
+                                <Link className="self-stretch my-auto cursor-pointer" href={"renting"}>
                                     Rent
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

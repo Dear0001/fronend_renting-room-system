@@ -1,35 +1,22 @@
 import React from 'react';
-import { FaStairs } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
+import {FaTachometerAlt} from "react-icons/fa";
 
-const Card = ({image, movie_title, description}) => {
+const Card = ({image, movie_title, key}) => {
     return (
         <>
             <div
-                className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+                className="relative flex w-full max-w-[26rem] flex-col py-5 rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
                 <div
-                    className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+                    className="relative mx-4 m-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
                     <Image width={400} height={400}
                            src={image ? image : "https://prod-images.viu.com/2521856816/6feda49624fdc12682d3a83feb50a732252503f9"}
                         alt="ui/ux review check"/>
-                    <div
-                        className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60">
-                    </div>
-                    <button
-                        className="!absolute  top-4 right-4 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-full text-center align-middle font-sans text-xs font-medium uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                        type="button">
-                     <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-          <path
-              d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z">
-          </path>
-        </svg>
-      </span>
-                    </button>
                 </div>
                 <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
-                        <h5 className="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
+                        <h5 className="block font-sans font-bold text-xl antialiased leading-snug tracking-normal text-blue-gray-900 max-lines-1">
                             {movie_title}
                         </h5>
                         <p
@@ -43,23 +30,29 @@ const Card = ({image, movie_title, description}) => {
                             5.0
                         </p>
                     </div>
-                    <p>Owner: <span className={"text-blue-400"}>Saing Sopheak</span></p>
-                    <p><span className={"font-bold"}>$70/$80/$90 </span>a month</p>
-                    <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-500">
-                        Contact number: 095 3832 434
+                    <p className={"font-bold text-[18px]"}>Owner: <span className={"text-blue-400"}>Saing Sopheak</span></p>
+                    <p className={"py-1"}><span className={"font-bold"}>$70/$80/$90 </span>a month</p>
+                    <p className="block font-sans text-base antialiased leading-relaxed text-gray-500 pb-1">
+                        <span className={"font-bold"}>Contact number:</span> 095 3832 434
                     </p>
-                    <p  className={"text-blue-400"}>• Renting Polices</p>
-                    <div className={"pt-5 flex justify-between"}>
-                        <p className={"flex gap-2"}>
-                            <FaStairs/>
-                            <span>3</span> Floor
+                    <p  className={"text-blue-400"}>• Rent Polices</p>
+                    <div className={"pt-5 flex gap-5"}>
+                        <p className={"flex justify-center text-left items-center gap-3"}>
+                            <Image height={20} width={20} src={"/assets/images/Stair.svg"} alt={"icon"}/>
+                            <span className={"font-bold text-[20px]"}>3</span> Floor
                         </p>
-                        <p className={"flex gap-2"}>
-                            <FaStairs/>
-                            <span>3</span> Floor
+                        <p className={"flex justify-center text-left items-center gap-3"}>
+                            <Image height={20} width={20} src={"/assets/images/bath.svg"} alt={"icon"}/>
+                            <span className={"font-bold text-[20px]"}>3</span> Floor
                         </p>
                     </div>
                 </div>
+                <Link href={`/detail/${key}`} key={key}>
+                        <span className={"flex text-center mx-5 items-center justify-center gap-4 bg-blue-500 text-white py-2.5 px-4 rounded-2xl"}>
+                            <FaTachometerAlt />
+                            See Detail...
+                        </span>
+                </Link>
             </div>
         </>
     );
