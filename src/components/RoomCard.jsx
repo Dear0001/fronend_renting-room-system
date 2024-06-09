@@ -7,11 +7,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 
-const RoomCard = ({movie_id,image, movie_title, description}) => {
+const RoomCard = ({movie_id,image}) => {
     console.log("this is movie id:", movie_id)
 
     return (
-        <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+        <article className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
             <div
                 className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
                 <Image width={500} height={500}
@@ -56,11 +56,12 @@ const RoomCard = ({movie_id,image, movie_title, description}) => {
                     <li>
                         <Link  href={`/detail/${movie_id}`} key={movie_id} type={"button"} className={"flex text-center items-center justify-center gap-4 bg-blue-500 text-white py-2.5 px-4 rounded-2xl"}>
                             <FaTachometerAlt />
-                            See More...</Link>
+                            See More...
+                        </Link>
                     </li>
                 </ul>
             </div>
-        </div>
+        </article>
     );
 };
 

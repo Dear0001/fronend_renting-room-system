@@ -1,4 +1,3 @@
-"use client"
 import BannerNav from "@/components/BannerNav";
 import { MdFindReplace } from "react-icons/md";
 import PreferencesComponents from "@/components/PreferencesComponents";

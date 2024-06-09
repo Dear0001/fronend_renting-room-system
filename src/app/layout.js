@@ -2,7 +2,7 @@
 import "./globals.css";
 import { getServerSession } from "next-auth";
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
-import Provider from "@/lib/client-provider";
+import Provider from "@/app/api/auth/client-provider";
 import NavbarRent from "@/components/NavbarRent";
 
 export const metadata = {
