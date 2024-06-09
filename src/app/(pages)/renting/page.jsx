@@ -10,6 +10,7 @@ const Page = async () => {
             <div className={"my-3"}>
             {result?.payload?.map((movie) => (
                 <CardRent
+                    key={movie.movie_id}
                     movie_id={movie.movie_id}
                     image={movie.image}
                     movie_title={movie.movie_title}
