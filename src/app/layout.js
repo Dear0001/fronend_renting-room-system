@@ -1,9 +1,9 @@
 
 import "./globals.css";
 import { getServerSession } from "next-auth";
-import {authOptions} from "@/app/api/auth/[...nextauth]/route";
-import Provider from "@/app/api/auth/client-provider";
+import Provider from "@/app/(auth)/api/auth/client-provider";
 import NavbarRent from "@/components/NavbarRent";
+import {authOptions} from "@/app/(auth)/api/auth/[...nextauth]/route";
 
 export const metadata = {
     title: "Next.js",

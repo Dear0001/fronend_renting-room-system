@@ -7,6 +7,14 @@ export default function middleware(request) {
     if (!token && path !== "/login") {
         return NextResponse.redirect(new URL("/login", request.url));
     }
+    if (token && (path === "/auth/login" || path === "/")) {
+        return NextResponse.redirect(new URL("/", request.url));
+    }
+
 }
 
 export const config = { matcher: ["/renting"] };
+
+// export { default } from "next-auth/middleware";
+
+// export const config = { matcher: ["/","/newfeed","/company","/company/companyId","/dashboard","/history","/postdetail","/setting","/userprofile","/application","/report","/task"] };

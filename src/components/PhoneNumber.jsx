@@ -3,8 +3,7 @@ import React from 'react';
 const PhoneNumber = () => {
     return (
         <>
-            <p className="mb-1 font-medium text-gray-500">Phone Number</p>
-            <div className="mb-4 flex flex-col">
+            <div className="mb-4 flex flex-col my-2">
                 <div
                     className="focus-within:border-blue-600 relativeflex overflow-hidden rounded-md border-2 transition sm:w-80 lg:w-full">
                     <input type="number" id="signup-email"
