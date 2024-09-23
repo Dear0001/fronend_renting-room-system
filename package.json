@@ -15,7 +15,7 @@
     "date-fns": "^3.6.0",
     "formik": "^2.4.6",
     "js-cookie": "^3.0.5",
-    "next": "14.2.3",
+    "next": "14.2.13",
     "next-auth": "^4.24.7",
     "nodemailer": "^6.9.13",
     "react": "^18",
